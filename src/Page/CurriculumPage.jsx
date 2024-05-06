@@ -1,5 +1,4 @@
 import React from 'react';
-import { HeaderHome } from '../components/HeaderHome.jsx';
 import styled from 'styled-components';
 
 const CVContainer = styled.div`
@@ -15,17 +14,17 @@ const CV = styled.object`
     height: 100%;
 
     @media screen and (max-width: 768px) {
-        width:50%;
-        height:50%; 
-      }
+        width: 90vw;
+        height: 90vh;
+    }
 `;
 
 const CurriculumPage = () => {
     return(
         <>
-            <HeaderHome/>
+            {/* <HeaderHome/> */}
             <CVContainer>
-                <CV data={require('../assets/CV2024-Víctorsánchez.pdf')} type="application/pdf"></CV>
+                <CV data={'../assets/CV2024-Víctorsánchez.pdf'} type="application/pdf"></CV>
             </CVContainer>
         </>
     );

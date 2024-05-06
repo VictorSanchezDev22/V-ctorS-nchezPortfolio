@@ -12,7 +12,6 @@ const HomePage = () => {
     return(
         <MainContent>
             <HeaderHome>
-
             </HeaderHome>
             <HomeContent/>
 

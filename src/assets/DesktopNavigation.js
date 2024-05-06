@@ -27,21 +27,25 @@ const NavLinks = styled.ul`
   font-size: 1.5rem;
   
   a {
-    color: grey;
+    color: white;
     list-style: none;
   }
   
   a:hover {
-    color: grey;
+    color: white;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
-    text-decoration-color: rgb(181, 181, 181);    
+    text-decoration-color: rgb(255,255,255);    
   }
 `;
 
 const Logo = styled.div`
   color: white; 
-  font-size: 2rem;
+  font-size: 1.8rem;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 5rem;
+  }
 `;
 
 const HamburgerNav = styled.nav`
@@ -71,7 +75,7 @@ const HamburgerIcon = styled.div`
   span {
     width: 100%;
     height: 2px;
-    background-color: grey;
+    background-color: white;
     transition: all 0.3s ease-in-out;
 
     &:first-child {
@@ -99,7 +103,7 @@ const MenuLinks = styled.div`
   transition: all 0.3s ease-in-out;
 
   a {
-    color: grey;
+    color: white;
     list-style: none;
     display: block;
     padding: 10px;
@@ -110,7 +114,7 @@ const MenuLinks = styled.div`
   }
 
   a:hover {
-    color: grey;
+    color: white;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
     text-decoration-color: rgb(181, 181, 181);
@@ -153,6 +157,11 @@ const SectionPicContainer = styled.div`
     height: 275px;
     margin: 0 auto 2rem; 
   }
+
+  @media screen and (max-width: 700px) {
+    width:200px;
+    height: 200px;
+  }
 `;
 
 const SectionText = styled.div`
@@ -160,14 +169,30 @@ const SectionText = styled.div`
   margin-left: 2rem;
   align-self: center;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
 `;
 
 const SectionTextP1 = styled.p`
+  font-size : 1.25rem; 
   font-weight: 600;
   text-align: center;
 `;
 
+const OrangeGradientP = styled.p`
+  background: linear-gradient(45deg, #FFA500, #FF6347); /* Gradiente naranja */
+  -webkit-background-clip: text; /* Clip de texto para aplicar el gradiente al texto */
+  -webkit-text-fill-color: transparent; /* Color de texto transparente para permitir que el gradiente sea visible */
+  font-weight: bold; /* Letra más gruesa */
+  font-size: 1.5rem; /* Fuente más grande */
+`;
+
 const Title = styled.h1`
+  color:white; 
   font-size: 3rem;
   text-align: center;
 `;
@@ -226,16 +251,16 @@ const AboutDetailsContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  @media screen and (max-width: 700px) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+  }
 `;
 
 const AboutPic = styled.img`
   border-radius: 2rem;
-`;
-
-const Arrow = styled.div`
-  position: absolute;
-  right: -1rem;
-  bottom: -2.5rem;
 `;
 
 const DetailsContainer = styled.div`
@@ -250,6 +275,7 @@ const DetailsContainer = styled.div`
 // Sección "Experiencia"
 const ExperienceContainer = styled.div`
   position: relative;
+  padding : 2rem; 
 `;
 
 const ExperienceSubTitle = styled.h2`
@@ -285,24 +311,59 @@ const ArticleIcon = styled.div`
   cursor: default;
 `;
 
+const CenteredImage = styled.img`
+  display: block;
+  margin: 0 auto;
 
+  @media screen and (max-width: 768px) {
+    width: 80%; /* Reducir el ancho al 80% */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+`;
+
+
+const ReactIcon = styled.img`
+  display: block;
+  margin: 0 auto;
+  margin-top: 5rem; 
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+    margin-top: 5rem; 
+  }
+`;
+
+const GA = styled.img`
+  display: block;
+  width:40%; 
+  margin: 0 auto;
+  margin-top: 5rem; 
+  flex-direction: row;
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    margin-top: 5rem; 
+  }
+`;
 
 export {Body,Nav,NavLinks,Logo,HamburgerNav,HamburgerMenu,
-    HamburgerIcon,MenuLinks}
+    HamburgerIcon,MenuLinks};
 
 export{Section,SectionContainer,SectionPicContainer,
-    SectionText,SectionTextP1,Title,BtnContainer,Btn,SocialsContainer,
-    Icon }
+    SectionText,OrangeGradientP,SectionTextP1,Title,BtnContainer,Btn,SocialsContainer,
+    Icon };
 
-export {About,AboutContainers,AboutDetailsContainer,AboutPic,Arrow,
-        DetailsContainer,};
+export {About,AboutContainers,AboutDetailsContainer,AboutPic,
+        DetailsContainer};
 
-        
 export { 
   ExperienceContainer, 
   ExperienceSubTitle, 
   ExperienceDetailsContainer, 
   ArticleContainer, 
   Article, 
-  ArticleIcon 
+  ArticleIcon , 
+  CenteredImage,
+  ReactIcon, 
+  GA
 };

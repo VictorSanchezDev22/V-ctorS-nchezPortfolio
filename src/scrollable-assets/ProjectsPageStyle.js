@@ -6,6 +6,22 @@ const MainContent = styled.div`
   }
 `;
 
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+`;
+
+const StyledImage = styled.img`
+  width:100%; /* Ancho del 100% del contenedor */
+  max-width: 50px; /* Ancho máximo de 300px */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  margin-left: 2rem; 
+`;
+
 const BoxContainerWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -14,7 +30,6 @@ const BoxContainerWrapper = styled.div`
   margin-top: 5rem;
   margin-left: -2rem;
   @media only screen and (max-width: 50rem) {
-    margin-left: 2rem;
   }
 `;
 
@@ -36,7 +51,7 @@ const BoxContainer = styled.div`
 
   @media only screen and (max-width: 50rem) {
     margin-left: 2rem;
-    width:100%;
+    width:80%;
     font-size : 4rem;
   }
 `;
@@ -64,7 +79,7 @@ const BoxDescription = styled.div`
 const SloganPhrase = styled.div`
   color: white;
   font-size: 8rem;
-  padding-left: 7.25rem;
+  margin-left:7rem; 
   font-weight: 600;
   margin-bottom: 1rem;
   position: relative;
@@ -93,8 +108,9 @@ const SloganPhrase = styled.div`
   /* Responsive adjustments */
   @media only screen and (max-width: 50rem) {
     width:100%;
-    font-size : 3.5rem;
-    margin-left: -3.5rem;
+    font-size : 2.8rem;
+    margin-top: 0.625rem;
+    margin-left: 3rem;
     p, span {
       font-size: 0.1rem; /* Ajustando un poco más pequeño para mejor visualización */
     }
@@ -119,4 +135,4 @@ const SloganPhrase = styled.div`
   }
 `;
 
-export {MainContent,BoxContainerWrapper,BoxContainer,BoxImage,BoxDescription, SloganPhrase };
+export {MainContent,FlexContainer,StyledImage, BoxContainerWrapper,BoxContainer,BoxImage,BoxDescription, SloganPhrase };

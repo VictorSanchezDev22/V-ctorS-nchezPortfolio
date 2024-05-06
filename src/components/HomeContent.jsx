@@ -30,7 +30,7 @@ const HomeContent = () => {
                 Víctor Sánchez
                 </SloganPhrase>
                 <Descripcion>
-                Desarrollador FullStack especializado en React (Programador Web)
+                Desarrollador Front-end especializado en React (Programador Web)
                 </Descripcion>
                 <CircleImage src="/png/FOTO_formal2023.png"/>
                 <Link to="/projects">
